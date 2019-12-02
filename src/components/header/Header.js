@@ -8,7 +8,7 @@ const LinkRef = React.forwardRef((props, ref) => <RouterLink innerRef={ref} {...
 
 const sections = [
   { title: 'Home', url: '/' },
-  { title: 'Livres', url: '/livre' },
+  { title: 'Livres', url: '/livres' },
   { title: 'Offrir', url: '/offrir' },
   { title: 'Auteurs', url: '/auteurs' },
   { title: 'Projets', url: '/projets' },

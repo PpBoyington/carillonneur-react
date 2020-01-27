@@ -13,6 +13,13 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import HomeIcon from '@material-ui/icons/Home'
+import MenuBook from '@material-ui/icons/MenuBook'
+import ContactMailIcon from '@material-ui/icons/ContactMail'
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople'
+import CardGiftcardIcon from '@material-ui/icons/CardGiftcard'
+import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects'
+import LinkIcon from '@material-ui/icons/Link'
+import InfoIcon from '@material-ui/icons/Info'
 import { Link as RouterLink } from 'react-router-dom'
 import logo from '../../img/logo_header.jpg'
 
@@ -22,13 +29,13 @@ const drawerWidth = 240
 
 const sections = [
   { title: 'Home', url: '/', icon: <HomeIcon/> },
-  { title: 'Livres', url: '/livres', icon: <HomeIcon/> },
-  { title: 'Offrir', url: '/offrir', icon: <HomeIcon/> },
-  { title: 'Auteurs', url: '/auteurs', icon: <HomeIcon/> },
-  { title: 'Projets', url: '/projets', icon: <HomeIcon/> },
-  { title: 'Liens', url: '/liens', icon: <HomeIcon/> },
-  { title: 'A Propos', url: '/propos', icon: <HomeIcon/> },
-  { title: 'Contact', url: '/contact', icon: <HomeIcon/> }
+  { title: 'Livres', url: '/livres', icon: <MenuBook/> },
+  { title: 'Offrir', url: '/offrir', icon: <CardGiftcardIcon/> },
+  { title: 'Auteurs', url: '/auteurs', icon: <EmojiPeopleIcon/> },
+  { title: 'Projets', url: '/projets', icon: <EmojiObjectsIcon/> },
+  { title: 'Liens', url: '/liens', icon: <LinkIcon/> },
+  { title: 'A Propos', url: '/propos', icon: <InfoIcon/> },
+  { title: 'Contact', url: '/contact', icon: <ContactMailIcon/> }
 ]
 
 const useStyles = makeStyles(theme => ({
@@ -148,20 +155,20 @@ export default function Header () {
       <Divider />
       <List>
         {sections.map((section) => (
-          <ListItem button key={section.title}>
-            <ListItemIcon>{section.icon}</ListItemIcon>
-            <Link
-              color="inherit"
-              noWrap
-              key={section}
-              variant="body2"
-              className={classes.toolbarLink}
-              component={LinkRef}
-              to={section.url}
-            >
+          <Link
+            color="inherit"
+            noWrap
+            key={section}
+            variant="body2"
+            className={classes.toolbarLink}
+            component={LinkRef}
+            to={section.url}
+          >
+            <ListItem button key={section.title}>
+              <ListItemIcon>{section.icon}</ListItemIcon>
               {section.title}
-            </Link>
-          </ListItem>
+            </ListItem>
+          </Link>
         ))}
       </List>
     </Drawer>

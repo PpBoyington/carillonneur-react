@@ -1,5 +1,5 @@
 import React from 'react'
-import { CssBaseline, Container } from '@material-ui/core'
+import { CssBaseline } from '@material-ui/core'
 import { BrowserRouter as Router } from 'react-router-dom'
 import './App.css'
 import Header from './components/header/Header'
@@ -10,10 +10,8 @@ function App () {
     <div className="App">
       <Router>
         <CssBaseline />
-        <Container maxWidth="lg">
-          <Header/>
-          <AppRouter/>
-        </Container>
+        <Header/>
+        <AppRouter/>
       </Router>
     </div>
   )

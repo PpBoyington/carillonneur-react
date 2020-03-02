@@ -50,7 +50,8 @@ export default function Home (props) {
       <Grid container
         direction="row"
         justify="center"
-        alignItems="center">
+        alignItems="center"
+        spacing={3}>
         <BookCarousel carouselParam={carouselParam}/>
         <BookCarousel carouselParam={carouselParam}/>
         <BookCarousel carouselParam={carouselParam}/>

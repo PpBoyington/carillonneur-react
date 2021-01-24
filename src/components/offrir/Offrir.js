@@ -8,15 +8,17 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default function Contact () {
+const Contact = () => {
   const classes = useStyles()
   return (
     <div className={classes.root}>
-      <Grid container spacing='3'>
-        <Grid item xs='12'>
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
           <h3>Offrir</h3>
         </Grid>
       </Grid>
     </div>
   )
 }
+
+export default Contact

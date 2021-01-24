@@ -1,6 +1,10 @@
 import React from 'react'
 import { CardMedia, Grid, CardActionArea, makeStyles } from '@material-ui/core'
 import Carousel from 'react-material-ui-carousel'
+import KropyDraach from '../../img/Kropy_Draach.png'
+import KropyPilly from '../../img/Kropy_pilly.png'
+import MelKropyBocal from '../../img/MelKropyBocal.png'
+import MelKropyJeanLoup from '../../img/MelKropyJeanLoup.png'
 
 const useStyles = makeStyles(theme => ({
   carousel: {
@@ -12,19 +16,19 @@ const BookCarousel = () => {
   const classes = useStyles()
 
   const items = [{
-    image: '/img/Kropy_Draach.png',
+    image: KropyDraach,
     name: 'Kropy & Draach'
   },
   {
-    image: '/img/Kropy_pilly.png',
+    image: KropyPilly,
     name: 'Kropy & Pilly'
   },
   {
-    image: '/img/MelKropyBocal.png',
+    image: MelKropyBocal,
     name: 'Mel, Kropy & Bocal'
   },
   {
-    image: '/img/MelKropyJeanLoup.png',
+    image: MelKropyJeanLoup,
     name: 'Mel, Kropy & JeanLoup'
   }]
 
@@ -33,20 +37,19 @@ const BookCarousel = () => {
   const animation = 'fade'
   const indicators = true
 
-  return <Grid item xs="12">
+  return <Grid item xs={12}>
     <Carousel
       autoPlay={autoPlay}
       timer={timer}
       animation={animation}
       className={classes.carousel}
       indicators={indicators}>
-      {items.map((item, index) => (
-        <CardActionArea key={index}>
+      {items.map(item => (
+        <CardActionArea key={item.name}>
           <CardMedia
             component="img"
             image={item.image}
-            title={item.name}
-            key={index}>
+            title={item.name}>
           </CardMedia>
         </CardActionArea>
       ))}

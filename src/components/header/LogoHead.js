@@ -4,8 +4,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Link as RouterLink } from 'react-router-dom'
 import logo from '../../img/logo_header.jpg'
 
-const LinkRef = React.forwardRef((props, ref) => <RouterLink innerRef={ref} {...props} />)
-
 const sections = [
   { title: 'Accueil', url: '/' },
   { title: 'Caranusca', url: '/livres' },
@@ -50,10 +48,10 @@ const LogoHead = () => {
             <Link
               color="inherit"
               noWrap
-              key={section}
+              key={section.title}
               variant="body2"
               className={classes.toolbarLink}
-              component={LinkRef}
+              component={RouterLink}
               to={section.url}
             >
               {section.title}

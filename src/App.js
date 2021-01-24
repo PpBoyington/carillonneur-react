@@ -2,8 +2,8 @@ import React from 'react'
 import { CssBaseline, Container, makeStyles } from '@material-ui/core'
 import { BrowserRouter as Router } from 'react-router-dom'
 import './App.css'
-import Header from './components/header/Header'
-import AppRouter from './components/AppRouter'
+import Header from './layouts/header/Header'
+import AppRouter from './AppRouter'
 
 const useStyles = makeStyles(theme => ({
   containerStyle: {

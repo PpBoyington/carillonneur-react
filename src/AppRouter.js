@@ -1,13 +1,13 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Home from './home/Home'
-import Contact from './contact/Contact'
-import Livres from './livres/Livres'
-import Offrir from './offrir/Offrir'
-import Auteurs from './auteurs/Auteurs'
-import Projets from './projets/Projets'
-import Liens from './liens/Liens'
-import Propos from './propos/Propos'
+import Home from './layouts/home/Home'
+import Contact from './views/contact/Contact'
+import Livres from './views/livres/Livres'
+import Offrir from './views/offrir/Offrir'
+import Auteurs from './views/auteurs/Auteurs'
+import Projets from './views/projets/Projets'
+import Liens from './views/liens/Liens'
+import Propos from './views/propos/Propos'
 
 const AppRouter = () => {
   return (

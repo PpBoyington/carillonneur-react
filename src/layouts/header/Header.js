@@ -6,9 +6,8 @@ const useStyles = makeStyles(theme => ({
   headBlack: {
     flexGrow: 1,
     width: '100%',
-    height: 30,
-    backgroundColor: 'black',
-    color: 'white'
+    height: 40,
+    backgroundColor: '#242124'
   }
 }))
 
@@ -17,7 +16,7 @@ const Header = () => {
 
   return (
     <>
-      <div className={classes.headBlack}></div>
+      <div className={classes.headBlack} />
       <LogoHead/>
     </>
   )

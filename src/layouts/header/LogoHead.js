@@ -1,5 +1,5 @@
 import React from 'react'
-import { Toolbar, Link, Grid, CardMedia } from '@material-ui/core'
+import { Toolbar, Link, Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { Link as RouterLink } from 'react-router-dom'
 import logo from '../../img/logo_header.jpg'
@@ -34,30 +34,33 @@ const useStyles = makeStyles(theme => ({
 const LogoHead = () => {
   const classes = useStyles()
   return <header className="App-header">
-    <Grid container spacing={3} direction="column"
+    <Grid
+      container
+      direction="row"
       justify="center"
       alignItems="center">
-      <Grid item xs={12}>
-        <CardMedia component="img"
-          height="100%"
-          image={logo} alt="logo" className={classes.logo} />
+      <Grid item xs={6}>
+        <img src={logo} title="logo" alt="logo" className={classes.logo} />
       </Grid>
-      <Grid item xs={12}>
-        <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
-          {sections.map(section => (
-            <Link
-              color="inherit"
-              noWrap
-              key={section.title}
-              variant="body2"
-              className={classes.toolbarLink}
-              component={RouterLink}
-              to={section.url}
-            >
-              {section.title}
-            </Link>
-          ))}
-        </Toolbar>
+      <Grid item xs={6}>
+        <Grid item xs={8}>
+          <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
+            {sections.map(section => (
+              <Link
+                color="inherit"
+                noWrap
+                key={section.title}
+                variant="body2"
+                className={classes.toolbarLink}
+                component={RouterLink}
+                to={section.url}
+                underline={'none'}
+              >
+                {section.title}
+              </Link>
+            ))}
+          </Toolbar>
+        </Grid>
       </Grid>
     </Grid>
   </header>

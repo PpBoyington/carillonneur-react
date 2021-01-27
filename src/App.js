@@ -1,30 +1,34 @@
 import React from 'react'
-import { CssBaseline, Container, makeStyles } from '@material-ui/core'
+import { Container, CssBaseline, makeStyles } from '@material-ui/core'
 import { BrowserRouter as Router } from 'react-router-dom'
 import './App.css'
 import Header from './layouts/header/Header'
 import AppRouter from './AppRouter'
+import BackgroundImage from './img/space.jpg'
+import { PayPalScriptProvider } from '@paypal/react-paypal-js'
 
 const useStyles = makeStyles(theme => ({
-  containerStyle: {
-    boxShadow: '0px 0px 6px 1px rgba(0,0,0,0.75)',
-    paddingLeft: 0,
-    paddingRight: 0
+  root: {
+    textAlign: 'center',
+    background: 'url(' + BackgroundImage + ') no-repeat center center fixed',
+    backgroundSize: 'cover'
   }
 }))
 
 const App = () => {
   const classes = useStyles()
   return (
-    <div className="App">
-      <Router>
-        <CssBaseline />
-        <Container maxWidth="md" className={classes.containerStyle}>
+    <PayPalScriptProvider options={{ 'client-id': 'AYstNA3V-_h96Kvfgbt1IB4tT9gjLlQQatgk006mzioIIw8ZtrywTu6MTNeC-7FwsvutvDtkELh8L-SW' }}>
+      <div className={classes.root}>
+        <Router>
+          <CssBaseline/>
           <Header/>
-          <AppRouter/>
-        </Container>
-      </Router>
-    </div>
+          <Container>
+            <AppRouter/>
+          </Container>
+        </Router>
+      </div>
+    </PayPalScriptProvider>
   )
 }
 

@@ -1,14 +1,18 @@
 import React from 'react'
-import { CardMedia, Grid, CardActionArea, makeStyles } from '@material-ui/core'
-import Carousel from 'react-material-ui-carousel'
+import { Card, CardMedia, Grid, makeStyles } from '@material-ui/core'
 import KropyDraach from '../../img/Kropy_Draach.png'
 import KropyPilly from '../../img/Kropy_pilly.png'
 import MelKropyBocal from '../../img/MelKropyBocal.png'
 import MelKropyJeanLoup from '../../img/MelKropyJeanLoup.png'
+import Carousel from 'react-material-ui-carousel'
 
 const useStyles = makeStyles(theme => ({
-  carousel: {
-    height: '100'
+  root: {
+    width: '100%'
+  },
+  media: {
+    width: '100%',
+    height: 700
   }
 }))
 
@@ -16,45 +20,45 @@ const BookCarousel = () => {
   const classes = useStyles()
 
   const items = [{
-    image: KropyDraach,
+    url: KropyDraach,
     name: 'Kropy & Draach'
   },
   {
-    image: KropyPilly,
+    url: KropyPilly,
     name: 'Kropy & Pilly'
   },
   {
-    image: MelKropyBocal,
+    url: MelKropyBocal,
     name: 'Mel, Kropy & Bocal'
   },
   {
-    image: MelKropyJeanLoup,
+    url: MelKropyJeanLoup,
     name: 'Mel, Kropy & JeanLoup'
   }]
-
-  const autoPlay = true
+  const autoPlay = false
   const timer = 500
   const animation = 'fade'
   const indicators = true
 
-  return <Grid item xs={12}>
-    <Carousel
-      autoPlay={autoPlay}
-      timer={timer}
-      animation={animation}
-      className={classes.carousel}
-      indicators={indicators}>
-      {items.map(item => (
-        <CardActionArea key={item.name}>
-          <CardMedia
-            component="img"
-            image={item.image}
-            title={item.name}>
-          </CardMedia>
-        </CardActionArea>
-      ))}
-    </Carousel>
-  </Grid>
+  return <Card raised>
+    <Grid container
+      justify="center"
+      alignItems="center">
+      <Carousel autoPlay={autoPlay}
+        timer={timer}
+        animation={animation} className={classes.root}
+        indicators={indicators}>
+        {items.map(item =>
+          <Grid item xs key={item.url}>
+            <CardMedia
+              className={classes.media}
+              title={item.name}
+              image={item.url}/>
+          </Grid>
+        )}
+      </Carousel>
+    </Grid>
+  </Card>
 }
 
 export default BookCarousel

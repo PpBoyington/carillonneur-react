@@ -10,9 +10,14 @@ const useStyles = makeStyles(theme => ({
   root: {
     width: '100%'
   },
+  container: {
+    display: 'flex',
+    alignItem: 'center',
+    justifyContent: 'center'
+  },
   media: {
-    width: '100%',
-    height: 700
+    width: 'auto',
+    maxHeight: 700
   }
 }))
 
@@ -40,25 +45,26 @@ const BookCarousel = () => {
   const animation = 'fade'
   const indicators = true
 
-  return <Card raised>
-    <Grid container
-      justify="center"
-      alignItems="center">
+  return <Grid container
+    justify="center"
+    alignItems="center">
+    <Card raised className={classes.root}>
       <Carousel autoPlay={autoPlay}
         timer={timer}
-        animation={animation} className={classes.root}
+        animation={animation}
         indicators={indicators}>
         {items.map(item =>
-          <Grid item xs key={item.url}>
+          <div className={classes.container} key={item.url}>
             <CardMedia
               className={classes.media}
               title={item.name}
+              component='img'
               image={item.url}/>
-          </Grid>
+          </div>
         )}
       </Carousel>
-    </Grid>
-  </Card>
+    </Card>
+  </Grid>
 }
 
 export default BookCarousel

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Card, CardMedia, Grid, makeStyles } from '@material-ui/core'
-import KropyDraach from '../../img/Kropy_Draach.png'
-import KropyPilly from '../../img/Kropy_pilly.png'
-import MelKropyBocal from '../../img/MelKropyBocal.png'
-import MelKropyJeanLoup from '../../img/MelKropyJeanLoup.png'
+import KropyDraach from '../img/Kropy_Draach.png'
+import KropyPilly from '../img/Kropy_pilly.png'
+import MelKropyBocal from '../img/MelKropyBocal.png'
+import MelKropyJeanLoup from '../img/MelKropyJeanLoup.png'
 import Carousel from 'react-material-ui-carousel'
 
 const useStyles = makeStyles(theme => ({

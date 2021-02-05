@@ -1,6 +1,6 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Home from './layouts/home/Home'
+import Home from './views/home/Home'
 import Contact from './views/contact/Contact'
 import Livres from './views/livres/Livres'
 import Offrir from './views/offrir/Offrir'

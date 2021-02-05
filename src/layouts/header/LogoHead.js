@@ -1,5 +1,5 @@
 import React from 'react'
-import { Toolbar, Link, Grid } from '@material-ui/core'
+import { Toolbar, Grid, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { Link as RouterLink } from 'react-router-dom'
 import logo from '../../img/logo_header.jpg'
@@ -43,21 +43,19 @@ const LogoHead = () => {
         <img src={logo} title="logo" alt="logo" className={classes.logo} />
       </Grid>
       <Grid item xs={6}>
-        <Grid item xs={8}>
+        <Grid item xs={9}>
           <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
             {sections.map(section => (
-              <Link
+              <Button
                 color="inherit"
-                noWrap
                 key={section.title}
-                variant="body2"
                 className={classes.toolbarLink}
                 component={RouterLink}
                 to={section.url}
                 underline={'none'}
               >
                 {section.title}
-              </Link>
+              </Button>
             ))}
           </Toolbar>
         </Grid>

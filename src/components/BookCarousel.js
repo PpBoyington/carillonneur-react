@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   },
   media: {
     width: 'auto',
-    maxHeight: 700
+    maxHeight: 600
   }
 }))
 

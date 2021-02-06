@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const LogoHead = () => {
+const NavHead = () => {
   const classes = useStyles()
   return <header className="App-header">
     <Grid
@@ -64,4 +64,4 @@ const LogoHead = () => {
   </header>
 }
 
-export default LogoHead
+export default NavHead

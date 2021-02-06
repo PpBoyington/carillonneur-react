@@ -1,5 +1,5 @@
 import React from 'react'
-import LogoHead from './LogoHead'
+import LogoHead from './NavHead'
 import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({

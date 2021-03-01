@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e3a1b487.chunk.css",
+    "main.js": "/static/js/main.412648ee.chunk.js",
+    "main.js.map": "/static/js/main.412648ee.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.db97b1d3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.db97b1d3.js.map",
+    "static/js/2.05e84f7b.chunk.js": "/static/js/2.05e84f7b.chunk.js",
+    "static/js/2.05e84f7b.chunk.js.map": "/static/js/2.05e84f7b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.921be804eab7f490754d3581dca75437.js": "/precache-manifest.921be804eab7f490754d3581dca75437.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.e3a1b487.chunk.css.map": "/static/css/main.e3a1b487.chunk.css.map",
+    "static/media/Kropy_Draach.png": "/static/media/Kropy_Draach.9073db8a.png",
+    "static/media/Kropy_pilly.png": "/static/media/Kropy_pilly.47548138.png",
+    "static/media/MelKropyBocal.png": "/static/media/MelKropyBocal.ec28c48a.png",
+    "static/media/MelKropyJeanLoup.png": "/static/media/MelKropyJeanLoup.32ab89f7.png",
+    "static/media/logo_header.jpg": "/static/media/logo_header.bd025f39.jpg",
+    "static/media/space.jpg": "/static/media/space.ed87d997.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.db97b1d3.js",
+    "static/js/2.05e84f7b.chunk.js",
+    "static/css/main.e3a1b487.chunk.css",
+    "static/js/main.412648ee.chunk.js"
+  ]
+}

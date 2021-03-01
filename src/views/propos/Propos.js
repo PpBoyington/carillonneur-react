@@ -8,13 +8,13 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default function Contact () {
+export default function Propos () {
   const classes = useStyles()
   return (
     <div className={classes.root}>
-      <Grid container spacing='3'>
-        <Grid item xs='12'>
-          <h3>Contact</h3>
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <h3>Propos</h3>
         </Grid>
       </Grid>
     </div>

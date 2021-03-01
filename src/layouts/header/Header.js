@@ -1,6 +1,7 @@
 import React from 'react'
 import LogoHead from './NavHead'
-import { makeStyles } from '@material-ui/core'
+import { AppBar, makeStyles, Slide } from '@material-ui/core'
+import useScrollTrigger from '@material-ui/core/useScrollTrigger'
 
 const useStyles = makeStyles(theme => ({
   headBlack: {
@@ -13,12 +14,16 @@ const useStyles = makeStyles(theme => ({
 
 const Header = () => {
   const classes = useStyles()
+  const trigger = useScrollTrigger()
 
   return (
-    <>
-      <div className={classes.headBlack} />
-      <LogoHead/>
-    </>
+    <header className="App-header">
+      <Slide appear={false} direction="down" in={!trigger}>
+        <AppBar position="static">
+          <LogoHead/>
+        </AppBar>
+      </Slide>
+    </header>
   )
 }
 

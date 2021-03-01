@@ -33,35 +33,33 @@ const useStyles = makeStyles(theme => ({
 
 const NavHead = () => {
   const classes = useStyles()
-  return <header className="App-header">
-    <Grid
-      container
-      direction="row"
-      justify="center"
-      alignItems="center">
-      <Grid item xs={6}>
-        <img src={logo} title="logo" alt="logo" className={classes.logo} />
-      </Grid>
-      <Grid item xs={6}>
-        <Grid item xs={9}>
-          <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
-            {sections.map(section => (
-              <Button
-                color="inherit"
-                key={section.title}
-                className={classes.toolbarLink}
-                component={RouterLink}
-                to={section.url}
-                underline={'none'}
-              >
-                {section.title}
-              </Button>
-            ))}
-          </Toolbar>
-        </Grid>
+  return <Grid
+    container
+    direction="row"
+    justify="center"
+    alignItems="center">
+    <Grid item xs={6}>
+      <img src={logo} title="logo" alt="logo" />
+    </Grid>
+    <Grid item xs={6}>
+      <Grid item xs={9}>
+        <Toolbar id="back-to-top-anchor" component="nav" variant="dense" className={classes.toolbarSecondary}>
+          {sections.map(section => (
+            <Button
+              color="inherit"
+              key={section.title}
+              className={classes.toolbarLink}
+              component={RouterLink}
+              to={section.url}
+              underline={'none'}
+            >
+              {section.title}
+            </Button>
+          ))}
+        </Toolbar>
       </Grid>
     </Grid>
-  </header>
+  </Grid>
 }
 
 export default NavHead

@@ -43,7 +43,7 @@ const App = () => {
   return (
     // <PayPalScriptProvider options={{ 'client-id': 'AYstNA3V-_h96Kvfgbt1IB4tT9gjLlQQatgk006mzioIIw8ZtrywTu6MTNeC-7FwsvutvDtkELh8L-SW' }}>
     <div className={classes.root}>
-      <Router>
+      <Router basename={process.env.REACT_APP_ROOT_URL}>
         <CssBaseline/>
         <Header/>
         <Container>

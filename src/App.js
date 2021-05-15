@@ -15,7 +15,8 @@ const useStyles = makeStyles(theme => ({
   root: {
     textAlign: 'center',
     background: 'url(' + BackgroundImage + ') no-repeat center center fixed',
-    backgroundSize: 'cover'
+    backgroundSize: 'cover',
+    paddingTop: 75
   },
   scrollUp: {
     right: 16,

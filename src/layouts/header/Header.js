@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className="App-header">
       <Slide appear={false} direction="down" in={!trigger}>
-        <AppBar position="static">
+        <AppBar color="inherit">
           <LogoHead/>
         </AppBar>
       </Slide>

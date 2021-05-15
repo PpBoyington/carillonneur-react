@@ -9,18 +9,18 @@ import Carousel from 'react-material-ui-carousel'
 const useStyles = makeStyles(theme => ({
   banner: {
     width: '100%',
-    height: '600px',
+    height: '500px',
     position: 'relative'
   },
   media: {
-    maxHeight: 600,
+    maxHeight: 500,
     maxWidth: 'auto',
     objectFit: 'contain',
     overflow: 'hidden',
     position: 'relative'
   },
   bannerGrid: {
-    height: 600,
+    height: 500,
     position: 'relative'
   }
 }))
@@ -46,7 +46,7 @@ const BookCarousel = () => {
   }]
   const autoPlay = true
   const timer = 500
-  const animation = 'fade'
+  const animation = 'slide'
   const navButtonsAlwaysVisible = true
 
   return <Carousel autoPlay={autoPlay}

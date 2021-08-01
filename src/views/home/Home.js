@@ -1,6 +1,7 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import BookCarousel from '../../components/BookCarousel'
+import TextCarousel from '../../components/TextCarousel'
 import { Card, makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
@@ -14,6 +15,9 @@ const Home = () => {
   return <Grid container>
     <Grid item xs={12} className={classes.root}>
       <BookCarousel/>
+    </Grid>
+    <Grid item xs={6} className={classes.root}>
+      <TextCarousel/>
     </Grid>
     <Grid item xs={12} className={classes.root}>
       <Card >

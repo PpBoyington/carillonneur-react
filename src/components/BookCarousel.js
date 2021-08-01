@@ -7,17 +7,21 @@ import MelKropyJeanLoup from '../img/MelKropyJeanLoup.png'
 import Carousel from 'react-material-ui-carousel'
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    width: '100%'
-  },
-  container: {
-    display: 'flex',
-    alignItem: 'center',
-    justifyContent: 'center'
+  banner: {
+    width: '100%',
+    height: '500px',
+    position: 'relative'
   },
   media: {
-    width: 'auto',
-    maxHeight: 600
+    maxHeight: 500,
+    maxWidth: 'auto',
+    objectFit: 'contain',
+    overflow: 'hidden',
+    position: 'relative'
+  },
+  bannerGrid: {
+    height: 500,
+    position: 'relative'
   }
 }))
 
@@ -40,31 +44,29 @@ const BookCarousel = () => {
     url: MelKropyJeanLoup,
     name: 'Mel, Kropy & JeanLoup'
   }]
-  const autoPlay = false
+  const autoPlay = true
   const timer = 500
-  const animation = 'fade'
-  const indicators = true
+  const animation = 'slide'
+  const navButtonsAlwaysVisible = true
 
-  return <Grid container
-    justify="center"
-    alignItems="center">
-    <Card raised className={classes.root}>
-      <Carousel autoPlay={autoPlay}
-        timer={timer}
-        animation={animation}
-        indicators={indicators}>
-        {items.map(item =>
-          <div className={classes.container} key={item.url}>
+  return <Carousel autoPlay={autoPlay}
+    timer={timer}
+    animation={animation}
+    navButtonsAlwaysVisible={navButtonsAlwaysVisible}>
+    {items.map(item =>
+      <Card raised className={classes.banner} key={item.name}>
+        <Grid container spacing={0} className={classes.bannerGrid} >
+          <Grid xs={12} item >
             <CardMedia
               className={classes.media}
               title={item.name}
               component='img'
               image={item.url}/>
-          </div>
-        )}
-      </Carousel>
-    </Card>
-  </Grid>
+          </Grid>
+        </Grid>
+      </Card>
+    )}
+  </Carousel>
 }
 
 export default BookCarousel

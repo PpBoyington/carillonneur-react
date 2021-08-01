@@ -2,17 +2,18 @@
   "name": "carillonneur-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ppboyington.github.io/carillonneur-react/",
   "dependencies": {
-    "@material-ui/core": "^4.7.0",
+    "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.5.1",
-    "@paypal/react-paypal-js": "^4.0.2",
-    "gh-pages": "^3.1.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-material-ui-carousel": "^2.1.2",
+    "@paypal/react-paypal-js": "^4.2.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-material-ui-carousel": "^2.2.6",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
-    "typeface-roboto": "0.0.75"
+    "typeface-roboto": "0.0.75",
+    "typescript": "^4.2.4"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -35,14 +36,15 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^6.7.1",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-material-ui": "^1.0.1",
     "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.3.0",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "eslint-plugin-standard": "^4.1.0",
+    "gh-pages": "^3.1.0"
   }
 }

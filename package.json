@@ -46,5 +46,15 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "eslint-plugin-standard": "^4.1.0",
     "gh-pages": "^3.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "shared-config"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    }
   }
 }

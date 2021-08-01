@@ -54,7 +54,6 @@ const TextCarousel = () => {
     animation,
     navButtonsAlwaysVisible
   } = useTextCarousel()
-  debugger
 
   return <Carousel autoPlay={autoPlay}
     timer={timer}

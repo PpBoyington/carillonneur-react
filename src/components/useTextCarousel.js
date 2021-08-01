@@ -158,13 +158,11 @@ const useTextCarousel = () => {
   const handleClickOpen = useCallback(() => {
     setOpen(true)
     setAutoPlay(false)
-    debugger
   }, [setAutoPlay])
 
   const handleClose = useCallback(() => {
     setOpen(false)
     setAutoPlay(true)
-    debugger
   }, [setAutoPlay])
 
   const handlePrint = useCallback(() => {

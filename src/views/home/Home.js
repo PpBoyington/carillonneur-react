@@ -5,7 +5,7 @@ import TextCarousel from '../../components/TextCarousel'
 import { Card, makeStyles, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
-  root: {
+  carousel: {
     marginTop: 50
   }
 }))
@@ -13,18 +13,20 @@ const useStyles = makeStyles(theme => ({
 const Home = () => {
   const classes = useStyles()
   return <Grid container>
-    <Grid item xs={12} className={classes.root}>
+    <Grid item xs={12} className={classes.carousel}>
       <BookCarousel/>
     </Grid>
-    <Grid item xs={6} className={classes.root}>
-      <>
-        <Typography variant="h3">
-          Sur la route de Caranusca
-        </Typography>
-        <TextCarousel/>
-      </>
+    <Grid container item justify="center">
+      <Grid item xs={6} className={classes.carousel}>
+        <>
+          <Typography variant="h3">
+            Sur la route de Caranusca
+          </Typography>
+          <TextCarousel/>
+        </>
+      </Grid>
     </Grid>
-    <Grid item xs={12} className={classes.root}>
+    <Grid item xs={12} className={classes.carousel}>
       <Card >
         The subreddit, describing itself through the tagline "Like 4chan found a Bloomberg terminal",[3] is known for its aggressive trading strategies, which primarily revolve around highly speculative, leveraged options trading. Members of the subreddit are often young retail traders and investors who ignore fundamental investment practices and risk management techniques, so their activity is considered gambling. The growing popularity of no-commission brokers and mobile online trading has potentially contributed to the growth of such trading trends. Members of the communities often see high-risk day trading as an opportunity to quickly improve their financial conditions and obtain additional income. Some of the members tend to use borrowed capital, like student loans, to bet on certain "meme stocks" that show popularity within the community.[1][4][5][6][7]
 

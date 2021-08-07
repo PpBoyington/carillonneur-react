@@ -33,11 +33,7 @@ const App = () => {
   })
 
   const handleClick = (event) => {
-    const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor')
-
-    if (anchor) {
-      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
-    }
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
@@ -50,11 +46,9 @@ const App = () => {
           <AppRouter/>
         </Container>
         <Zoom in={trigger}>
-          <div onClick={handleClick} role="presentation" className={classes.scrollUp}>
-            <Fab color="secondary" size="small" aria-label="scroll back to top">
-              <KeyboardArrowUpIcon />
-            </Fab>
-          </div>
+          <Fab color="secondary" size="small" aria-label="scroll back to top" onClick={handleClick} role="presentation" className={classes.scrollUp}>
+            <KeyboardArrowUpIcon />
+          </Fab>
         </Zoom>
         <Footer/>
       </Router>

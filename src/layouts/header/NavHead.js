@@ -43,7 +43,7 @@ const NavHead = () => {
     </Grid>
     <Grid item xs={6}>
       <Grid item xs={9}>
-        <Toolbar id="back-to-top-anchor" component="nav" variant="dense" className={classes.toolbarSecondary}>
+        <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
           {sections.map(section => (
             <Button
               color="inherit"

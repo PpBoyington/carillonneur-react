@@ -2,11 +2,13 @@ import React from 'react'
 import { Toolbar, Grid, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { Link, Link as RouterLink } from 'react-router-dom'
+import melKropyMenu from '../../img/mel_kropy_menu.png'
 import logo from '../../img/logo_header.jpg'
+import clsx from 'clsx'
 
 const sections = [
   { title: 'Caranusca', url: '/livres' },
-  { title: 'SBAMMM', url: '/offrir' },
+  { img: melKropyMenu, url: '/melkropy' },
   { title: 'Auteurs', url: '/auteurs' },
   { title: 'Projets', url: '/projets' },
   { title: 'Liens', url: '/liens' },
@@ -20,7 +22,12 @@ const useStyles = makeStyles(theme => ({
     overflowX: 'auto'
   },
   toolbarLink: {
-    padding: theme.spacing(3)
+    padding: theme.spacing(3),
+    textTransform: 'none',
+    fontWeight: '700'
+  },
+  caranusca: {
+    fontSize: '25px'
   }
 }))
 
@@ -37,16 +44,18 @@ const NavHead = () => {
         <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
           <Link to="/"><img src={logo} title="logo" alt="logo" /></Link>
           {sections.map(section => (
-            <Button
-              color="inherit"
-              key={section.title}
-              className={classes.toolbarLink}
-              component={RouterLink}
-              to={section.url}
-              underline={'none'}
-            >
-              {section.title}
-            </Button>
+            section.title
+              ? <Button
+                color="inherit"
+                key={section.title}
+                className={clsx({ [classes.toolbarLink]: true, [classes.caranusca]: section.title === 'Caranusca' })}
+                component={RouterLink}
+                to={section.url}
+                underline={'none'}
+              >
+                {section.title}
+              </Button>
+              : <Link to={section.url} style={{ width: '125px' }} ><img src={section.img} style={{ width: '125px' }} title="logo" alt="logo" /></Link>
           ))}
         </Toolbar>
       </Grid>

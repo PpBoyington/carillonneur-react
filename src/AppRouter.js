@@ -14,7 +14,7 @@ const AppRouter = () => {
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/contact" component={Contact} />
-      <Route exact path="/offrir" component={Offrir} />
+      <Route exact path="/melkropy" component={Offrir} />
       <Route exact path="/livres" component={Livres} />
       <Route exact path="/auteurs" component={Auteurs} />
       <Route exact path="/projets" component={Projets} />

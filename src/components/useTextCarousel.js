@@ -4,9 +4,9 @@ const useTextCarousel = () => {
   const [open, setOpen] = useState(false)
   const [autoPlay, setAutoPlay] = useState(true)
 
-  const timer = 500
+  const interval = 10000
   const animation = 'slide'
-  const navButtonsAlwaysVisible = true
+  const navButtonsAlwaysVisible = false
 
   const items = [
     {
@@ -171,7 +171,7 @@ Chuuut... Ron Pshh, Ron, Ron, Pshh, Pshh...`
     items,
     autoPlay,
     setAutoPlay,
-    timer,
+    interval,
     animation,
     navButtonsAlwaysVisible
   }

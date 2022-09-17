@@ -45,12 +45,12 @@ const BookCarousel = () => {
     name: 'Mel, Kropy & JeanLoup'
   }]
   const autoPlay = true
-  const timer = 500
+  const interval = 5000
   const animation = 'slide'
-  const navButtonsAlwaysVisible = true
+  const navButtonsAlwaysVisible = false
 
   return <Carousel autoPlay={autoPlay}
-    timer={timer}
+    interval={interval}
     animation={animation}
     navButtonsAlwaysVisible={navButtonsAlwaysVisible}>
     {items.map(item =>

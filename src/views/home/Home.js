@@ -2,7 +2,7 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import BookCarousel from '../../components/BookCarousel'
 import TextCarousel from '../../components/TextCarousel'
-import { Card, makeStyles, Typography } from '@material-ui/core'
+import { Card, createMuiTheme, makeStyles, ThemeProvider, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   carousel: {
@@ -12,18 +12,26 @@ const useStyles = makeStyles(theme => ({
 
 const Home = () => {
   const classes = useStyles()
+  const theme = createMuiTheme({
+    typography: {
+      fontFamily: [
+        'Pacifico',
+        'cursive'
+      ].join(',')
+    }
+  })
   return <Grid container>
     <Grid item xs={12} className={classes.carousel}>
       <BookCarousel/>
     </Grid>
     <Grid container item justify="center">
       <Grid item xs={6} className={classes.carousel}>
-        <>
+        <ThemeProvider theme={theme}>
           <Typography variant="h3">
             Sur la route de Caranusca
           </Typography>
           <TextCarousel/>
-        </>
+        </ThemeProvider>
       </Grid>
     </Grid>
     <Grid item xs={12} className={classes.carousel}>

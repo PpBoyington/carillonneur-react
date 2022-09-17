@@ -50,13 +50,13 @@ const TextCarousel = () => {
     open,
     items,
     autoPlay,
-    timer,
+    interval,
     animation,
     navButtonsAlwaysVisible
   } = useTextCarousel()
 
   return <Carousel autoPlay={autoPlay}
-    timer={timer}
+    interval={interval}
     animation={animation}
     navButtonsAlwaysVisible={navButtonsAlwaysVisible}>
     {items.map(item =>

@@ -1,26 +1,36 @@
 {
   "files": {
-    "main.css": "/carillonneur-react/static/css/main.e3a1b487.chunk.css",
-    "main.js": "/carillonneur-react/static/js/main.8a44cf07.chunk.js",
-    "main.js.map": "/carillonneur-react/static/js/main.8a44cf07.chunk.js.map",
+    "main.css": "/carillonneur-react/static/css/main.68b33340.chunk.css",
+    "main.js": "/carillonneur-react/static/js/main.bc460359.chunk.js",
+    "main.js.map": "/carillonneur-react/static/js/main.bc460359.chunk.js.map",
     "runtime-main.js": "/carillonneur-react/static/js/runtime-main.1927121a.js",
     "runtime-main.js.map": "/carillonneur-react/static/js/runtime-main.1927121a.js.map",
-    "static/js/2.8c70a851.chunk.js": "/carillonneur-react/static/js/2.8c70a851.chunk.js",
-    "static/js/2.8c70a851.chunk.js.map": "/carillonneur-react/static/js/2.8c70a851.chunk.js.map",
+    "static/js/2.06358875.chunk.js": "/carillonneur-react/static/js/2.06358875.chunk.js",
+    "static/js/2.06358875.chunk.js.map": "/carillonneur-react/static/js/2.06358875.chunk.js.map",
     "index.html": "/carillonneur-react/index.html",
-    "precache-manifest.1e9434cc794dbc916262d0e894733057.js": "/carillonneur-react/precache-manifest.1e9434cc794dbc916262d0e894733057.js",
+    "precache-manifest.59baa2cedd1bdf685a26b82fa2e91f26.js": "/carillonneur-react/precache-manifest.59baa2cedd1bdf685a26b82fa2e91f26.js",
     "service-worker.js": "/carillonneur-react/service-worker.js",
-    "static/css/main.e3a1b487.chunk.css.map": "/carillonneur-react/static/css/main.e3a1b487.chunk.css.map",
+    "static/css/main.68b33340.chunk.css.map": "/carillonneur-react/static/css/main.68b33340.chunk.css.map",
     "static/media/Kropy_Draach.png": "/carillonneur-react/static/media/Kropy_Draach.9073db8a.png",
     "static/media/Kropy_pilly.png": "/carillonneur-react/static/media/Kropy_pilly.47548138.png",
     "static/media/MelKropyBocal.png": "/carillonneur-react/static/media/MelKropyBocal.ec28c48a.png",
     "static/media/MelKropyJeanLoup.png": "/carillonneur-react/static/media/MelKropyJeanLoup.32ab89f7.png",
-    "static/media/logo_header.jpg": "/carillonneur-react/static/media/logo_header.bd025f39.jpg"
+    "static/media/Visuel_Mug-Mel_&_Kropy.jpg": "/carillonneur-react/static/media/Visuel_Mug-Mel_&_Kropy.84a5125b.jpg",
+    "static/media/ardinj_bio_expression.PNG": "/carillonneur-react/static/media/ardinj_bio_expression.b58a05bf.PNG",
+    "static/media/djinno_bio_expression.PNG": "/carillonneur-react/static/media/djinno_bio_expression.6804a767.PNG",
+    "static/media/jean_loup_bio_expression.PNG": "/carillonneur-react/static/media/jean_loup_bio_expression.b9b39ec8.PNG",
+    "static/media/krik_krak_bio_expression.PNG": "/carillonneur-react/static/media/krik_krak_bio_expression.040fec6b.PNG",
+    "static/media/kropy_bio_expression.PNG": "/carillonneur-react/static/media/kropy_bio_expression.da9a436b.PNG",
+    "static/media/logo_header.jpg": "/carillonneur-react/static/media/logo_header.bd025f39.jpg",
+    "static/media/lorela_bio_expression.PNG": "/carillonneur-react/static/media/lorela_bio_expression.e0a11fb5.PNG",
+    "static/media/mel_bio_expression.PNG": "/carillonneur-react/static/media/mel_bio_expression.9740018e.PNG",
+    "static/media/mel_kropy_menu.png": "/carillonneur-react/static/media/mel_kropy_menu.c3519cb4.png",
+    "static/media/rollup_mathieu_page-0001.jpg": "/carillonneur-react/static/media/rollup_mathieu_page-0001.889ff1df.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.1927121a.js",
-    "static/js/2.8c70a851.chunk.js",
-    "static/css/main.e3a1b487.chunk.css",
-    "static/js/main.8a44cf07.chunk.js"
+    "static/js/2.06358875.chunk.js",
+    "static/css/main.68b33340.chunk.css",
+    "static/js/main.bc460359.chunk.js"
   ]
 }

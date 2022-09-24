@@ -50,46 +50,43 @@ const Header = (): JSX.Element => {
 
   return (
     <Box sx={{ display: 'flex' }}>
-    <Slide appear={false} direction="down" in={!trigger}>
-      <AppBar color="inherit" position="sticky" component="nav">
-        <Grid
-    container
-    direction="row">
-
-    <Grid container item xs={12}>
-      <Grid container>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Link component={RouterLink} to="/"><img src={logo} title="logo" alt="logo" /></Link>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-          {sections.map(section => (
-            section.title != null
-              ? <Button
-                color="inherit"
-                key={section.title}
-                component={RouterLink}
-                to={section.url}
-              >
-                {section.title}
-              </Button>
-              : <Link component={RouterLink} to={section.url} ><img src={section.img} style={{ width: '125px' }} title="logo" alt="logo" /></Link>
-          ))}
-          </Box>
-        </Toolbar>
-      </Grid>
-    </Grid>
-  </Grid>
-      </AppBar>
-    </Slide>
-       <Box component="nav">
+      <Slide appear={false} direction="down" in={!trigger}>
+        <AppBar color="inherit" position="sticky" component="nav">
+          <Grid container direction="row">
+            <Grid container item xs={12}>
+              <Grid container>
+                <Toolbar>
+                  <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    edge="start"
+                    onClick={handleDrawerToggle}
+                    sx={{ mr: 2, display: { sm: 'none' } }}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                  <Link component={RouterLink} to="/"><img src={logo} title="logo" alt="logo" /></Link>
+                  <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    {sections.map(section => (
+                      section.title != null
+                        ? <Button
+                          color="inherit"
+                          key={section.title}
+                          component={RouterLink}
+                          to={section.url}
+                        >
+                          {section.title}
+                        </Button>
+                        : <Link key={section.url} component={RouterLink} to={section.url} ><img src={section.img} style={{ width: '125px' }} title="logo" alt="logo" /></Link>
+                    ))}
+                  </Box>
+                </Toolbar>
+              </Grid>
+            </Grid>
+          </Grid>
+        </AppBar>
+      </Slide>
+        <Box component="nav">
         <Drawer
           container={container}
           variant="temporary"
@@ -106,7 +103,7 @@ const Header = (): JSX.Element => {
           {drawer}
         </Drawer>
       </Box>
-      </Box>
+    </Box>
   )
 }
 

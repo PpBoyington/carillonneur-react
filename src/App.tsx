@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, useScrollTrigger, Grid, createTheme, ThemeProvider } from '@mui/material'
+import { Container, useScrollTrigger, createTheme, ThemeProvider } from '@mui/material'
 import { Outlet } from 'react-router-dom'
 import './App.css'
 import Header from './layouts/header/Header'
@@ -33,10 +33,8 @@ const App = (): JSX.Element => {
     <ThemeProvider theme={theme}>
       <Header/>
       <Container>
-        <Grid container>
         {/* <PayPalButtons /> */}
         <Outlet />
-        </Grid>
       </Container>
       <Zoom in={trigger}>
         <Fab color="secondary" size="small" aria-label="scroll back to top" onClick={handleClick} role="presentation" sx={{

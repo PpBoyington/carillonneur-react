@@ -1,13 +1,10 @@
-import { useCallback, useState } from 'react'
+interface Item {
+  desc: string
+  name: string
+  text: string
+}
 
-const useTextCarousel = () => {
-  const [open, setOpen] = useState(false)
-  const [autoPlay, setAutoPlay] = useState(true)
-
-  const interval = 10000
-  const animation = 'slide'
-  const navButtonsAlwaysVisible = false
-
+const useTextCarousel = (): Item[] => {
   const items = [
     {
       desc: 'Logée entre deux collines, tout en bas...',
@@ -149,32 +146,7 @@ Chuuut... Ron Pshh, Ron, Ron, Pshh, Pshh...`
     }
   ]
 
-  const handleClickOpen = useCallback(() => {
-    setOpen(true)
-    setAutoPlay(false)
-  }, [setAutoPlay])
-
-  const handleClose = useCallback(() => {
-    setOpen(false)
-    setAutoPlay(true)
-  }, [setAutoPlay])
-
-  const handlePrint = useCallback(() => {
-    window.print()
-  }, [])
-
-  return {
-    handleClickOpen,
-    handleClose,
-    handlePrint,
-    open,
-    items,
-    autoPlay,
-    setAutoPlay,
-    interval,
-    animation,
-    navButtonsAlwaysVisible
-  }
+  return items
 }
 
 export default useTextCarousel

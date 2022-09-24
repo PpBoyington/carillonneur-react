@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid } from '@mui/material'
 
-const Projets = () => {
+const Projets = (): JSX.Element => {
   return (
 
       <Grid container spacing={3}>

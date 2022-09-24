@@ -1,5 +1,5 @@
 import React from 'react'
-import { useScrollTrigger, Slide, AppBar, Box, Drawer, Typography, Toolbar, Grid, Button, Divider, List, ListItem, ListItemButton, ListItemText, Link } from '@mui/material'
+import { useScrollTrigger, Slide, AppBar, Box, Drawer, Toolbar, Grid, Button, List, ListItem, ListItemButton, Link, ListItemText } from '@mui/material'
 import { Link as RouterLink } from 'react-router-dom'
 import melKropyMenu from '../../img/mel_kropy_menu.png'
 import logo from '../../img/logo_header.jpg'
@@ -32,17 +32,13 @@ const Header = (): JSX.Element => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
-      <Divider />
       <List>
-        {sections.map((item) => (
-          <ListItem key={item.url} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-                (section.title != null)
-              ? <ListItemText primary={item.title} />
-              : <Link to={item.url} component={RouterLink} sx={{ width: '125px' }}><img src={item.img} style={{ width: '125px' }} title="logo" alt="logo" /></Link>
+        {sections.map((section) => (
+          <ListItem key={section.url} disablePadding>
+            <ListItemButton alignItems="center" component={RouterLink} to={section.url}>
+                {section.title != null
+                  ? <ListItemText primary={section.title} />
+                  : <img src={section.img} style={{ width: '125px' }} title="logo" alt="logo" />}
             </ListItemButton>
           </ListItem>
         ))}
@@ -50,13 +46,47 @@ const Header = (): JSX.Element => {
     </Box>
   )
 
-  const container = window !== undefined ? () => document.body : undefined
+  const container = undefined
 
   return (
-    <>
+    <Box sx={{ display: 'flex' }}>
     <Slide appear={false} direction="down" in={!trigger}>
       <AppBar color="inherit" position="sticky" component="nav">
-        <NavHead/>
+        <Grid
+    container
+    direction="row">
+
+    <Grid container item xs={12}>
+      <Grid container>
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Link component={RouterLink} to="/"><img src={logo} title="logo" alt="logo" /></Link>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          {sections.map(section => (
+            section.title != null
+              ? <Button
+                color="inherit"
+                key={section.title}
+                component={RouterLink}
+                to={section.url}
+              >
+                {section.title}
+              </Button>
+              : <Link component={RouterLink} to={section.url} ><img src={section.img} style={{ width: '125px' }} title="logo" alt="logo" /></Link>
+          ))}
+          </Box>
+        </Toolbar>
+      </Grid>
+    </Grid>
+  </Grid>
       </AppBar>
     </Slide>
        <Box component="nav">
@@ -76,50 +106,7 @@ const Header = (): JSX.Element => {
           {drawer}
         </Drawer>
       </Box>
-      </>
-  )
-}
-
-const NavHead = (): JSX.Element => {
-  const [mobileOpen, setMobileOpen] = React.useState(false)
-
-  const handleDrawerToggle = (): void => {
-    setMobileOpen(!mobileOpen)
-  }
-
-  return (<Grid
-    container
-    direction="row">
-
-    <Grid container item xs={12}>
-      <Grid container>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Link component={RouterLink} to="/"><img src={logo} title="logo" alt="logo" /></Link>
-          {sections.map(section => (
-            (section.title != null)
-              ? <Button
-                color="inherit"
-                key={section.title}
-                component={RouterLink}
-                to={section.url}
-              >
-                {section.title}
-              </Button>
-              : <Link component={RouterLink} to={section.url} style={{ width: '125px' }} ><img src={section.img} style={{ width: '125px' }} title="logo" alt="logo" /></Link>
-          ))}
-        </Toolbar>
-      </Grid>
-    </Grid>
-  </Grid>
+      </Box>
   )
 }
 

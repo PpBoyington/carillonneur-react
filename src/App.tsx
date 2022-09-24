@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, useScrollTrigger, Grid } from '@mui/material'
+import { Container, useScrollTrigger, Grid, createTheme, ThemeProvider } from '@mui/material'
 import { Outlet } from 'react-router-dom'
 import './App.css'
 import Header from './layouts/header/Header'
@@ -19,9 +19,18 @@ const App = (): JSX.Element => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const theme = createTheme({
+    typography: {
+      fontFamily: [
+        'Pacifico',
+        'cursive'
+      ].join(',')
+    }
+  })
+
   return (
     /* <PayPalScriptProvider options={{ 'client-id': 'AYstNA3V-_h96Kvfgbt1IB4tT9gjLlQQatgk006mzioIIw8ZtrywTu6MTNeC-7FwsvutvDtkELh8L-SW' }}> */
-    <>
+    <ThemeProvider theme={theme}>
       <Header/>
       <Container>
         <Grid container>
@@ -39,7 +48,7 @@ const App = (): JSX.Element => {
         </Fab>
       </Zoom>
       <Footer/>
-      </>
+      </ThemeProvider>
   /* </PayPalScriptProvider> */
   )
 }

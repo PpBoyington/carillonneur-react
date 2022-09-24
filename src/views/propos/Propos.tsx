@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid } from '@mui/material'
 
-export default function Propos () {
+export default function Propos (): JSX.Element {
   return (
     <Grid container spacing={3}>
       <Grid item xs={12}>

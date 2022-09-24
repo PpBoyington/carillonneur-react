@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid } from '@mui/material'
 
-const Liens = () => {
+const Liens = (): JSX.Element => {
   return (
     <Grid container spacing={3}>
       <Grid item xs={12}>

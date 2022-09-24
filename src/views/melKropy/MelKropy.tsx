@@ -10,7 +10,7 @@ import ardinjBioExpression from '../../img/ardinj_bio_expression.PNG'
 import djinnoBioExpression from '../../img/djinno_bio_expression.PNG'
 import lorelaBioExpression from '../../img/lorela_bio_expression.PNG'
 
-const MelKropy = () => {
+const MelKropy = (): JSX.Element => {
   return (
       <Grid container spacing={3}>
         <Grid container item spacing={2}xs={12}>

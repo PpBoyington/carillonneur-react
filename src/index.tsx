@@ -1,5 +1,5 @@
 import React, { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import ReactDOM from "react-dom/client"
 import './index.css'
 import { RouterProvider } from 'react-router'
 import Home from './views/home/Home'
@@ -13,9 +13,8 @@ import Propos from './views/propos/Propos'
 import { createBrowserRouter } from 'react-router-dom'
 import App from './App'
 
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const container = document.getElementById('root')!
-const root = createRoot(container)
+const root = ReactDOM.createRoot(container)
 const router = createBrowserRouter([
   {
     path: '/',
